@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <math.h>
 
 int somar(int n1, int n2){
     int soma = n1 + n2;
@@ -14,20 +15,20 @@ int multiplicar(int n1, int n2){
     return mutiplica;
 }
 
-float dividir(float n1, float n2){
-    float div;
+int dividir(int n1, int n2){
+
     if (n2 == 0)
     {
         printf("nao e possivel divir\n");
     }
     else{ 
-       printf("resulado da divisao e: %.2f", n1 / n2);
+       printf("resultado da divisao e: %d", n1 / n2);
     }
-    return div;
+
 }
 
 int main(){
-    int calculadora, n1, n2, opcao;
+    int n1, n2, opcao;
 
     printf("digite o primeiro numero: ");
     scanf("%d", &n1);
@@ -53,10 +54,10 @@ int main(){
         printf("resultado da subtracao e: %d", subtra(n1, n2));
         break;
     case 3:
-        printf("resultado da multiplicacao e: %d",multiplicar(n1,n2) );
+        printf("resultado da multiplicacao e: %d", multiplicar(n1,n2));
         break;
     case 4: 
-        printf("%.d", dividir(n1, n2));
+        printf(dividir(n1, n2));
         break;
     
     default:
